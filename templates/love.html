@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .flex-container>div {
+            margin: 10px;
+            padding: 20px;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: infinite;
+            animation-name: om;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            z-index: -1;
+        }
+
+        @keyframes om {
+            0% {
+                top: 400px;
+            }
+
+            50% {
+                top: 100px;
+                opacity: 0.5;
+            }
+
+            100% {
+                top: -300px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="h-14 bg-gradient-to-r from-sky-500 to-indigo-500">
+    <form action="/" method="POST">
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-10 mx-auto">
+                <div class="flex flex-col text-center w-full mb-12">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-rose-900">LOVE CALCULATOR</h1>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base font-bold text-rose-900">Here is the Love
+                        Calculator that lets you calculate love compatibility and your chances of a successful
+                        relationship.</p>
+                    <hr style="background:#881337  ; height:3px">
+                </div>
+
+                <div
+                    class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+                    <div class="relative flex-grow w-full">
+                        <label for="full-name" class="leading-7 text-md font-bold text-rose-900">Your Name</label>
+                        <input type="text" id="full-name" name="name1"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative flex-grow w-full">
+                        <label for="email" class="leading-7 text-sm  font-bold text-rose-900">Crush, Friend, Boyfriend,
+                            Girlfriend, Etc.</label>
+                        <input type="text" id="email" name="name2"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <button
+                        class="text-white bg-rose-900 border-0 py-2 px-8 focus:outline-none hover:bg-rose-900 rounded">See&nbspLOVE&nbsp%</button>
+
+                </div>
+                <br>
+                <div class="flex flex-col text-center w-full mb-12">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-rose-900 "><i class="fa fa-heart"
+                            style="font-size:48px;color:#881337"></i> % is {{result}}</h1>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="d1"><i class="fa fa-heart" style="font-size:48px;color:#881337"></i></div>
+                <div class="d2"><i class="fa fa-heart" style="font-size:100px;color:#881337"></i></div>
+                <div class="d3"><i class="fa fa-heart" style="font-size:26px;color:#881337"></i></div>
+                <div class="d3"><i class="fa fa-heart" style="font-size:50px;color:#881337"></i></div>
+                <div class="d3"><i class="fa fa-heart" style="font-size:28px;color:#881337"></i></div>
+                <div class="d3"><i class="fa fa-heart" style="font-size:71px;color:#881337"></i></div>
+                <div class="d3"><i class="fa fa-heart" style="font-size:44px;color:#881337"></i></div>
+                <div class="d3"><i class="fa fa-heart" style="font-size:33px;color:#881337"></i></div>
+                <div class="d3"><i class="fa fa-heart" style="font-size:10px;color:#881337"></i></div>
+                <div class="d3"><i class="fa fa-heart" style="font-size:90px;color:#881337"></i></div>
+            </div>
+        </section>
+    </form>
+
+    <footer class="text-gray-600 body-font inset-x-0 relative  bottom-0">
+
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <i class="fa fa-heart" style="font-size:48px;color:#881337"></i>
+                <span class="ml-3 text-xl text-rose-900">Love Calculator by Om Surti</span>
+            </a>
+            <p class="text-sm text-gray-900 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">©
+                2021 Love Calculator —
+                <a href="https://www.instagram.com/om_surti29/" class="text-gray-900 ml-1" rel="noopener noreferrer"
+                    target="_blank">@Om_Surti</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a href="/info">
+                    <button
+                        class="text-white bg-rose-900 border-0 py-2 px-8 focus:outline-none hover:bg-rose-900 rounded">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i> Info
+                    </button>
+                </a>
+            </span>
+        </div>
+    </footer>
+</body>
+
+</html>
