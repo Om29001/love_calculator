@@ -31,6 +31,11 @@
                                 2nd Input</th>
                             <th
                                 class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br">
+                                Please select
+                            </th>
+                            <th
+                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                Percentage
                             </th>
                         </tr>
                     </thead>
@@ -39,8 +44,9 @@
                             <tr>
                                 <td class="border-t-2 border-gray-200 px-4 py-3">{{j[0]}}</td>
                                 <td class="border-t-2 border-gray-200 px-4 py-3">{{j[1]}}</td>
+                                <td class="border-t-2 border-gray-200 px-4 py-3">{{j[2]}}</td>
                                 <td class="w-10 text-center border-gray-200 border-t-2">
-                                    <input type="radio" name="options" id="option1" value={{j[2]}}></input>
+                                    <input type="radio" name="options" id="option1" value={{j[3]}}></input>
                                 </td>
                              </tr>
                         {% endfor %} 
@@ -48,15 +54,14 @@
                 </table>
                 
             </div>
-            
         </div>
-    
     </section>
     <div class="fixed top-1/2 right-5 ">
         <button
         class="inline-flex items-center ml-auto text-white bg-rose-900 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
         Delete
         </button>
+        
         </div>
     </form>
 </body>

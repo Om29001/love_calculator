@@ -12,10 +12,13 @@ def hello_name(user):
 
 @app.route("/nooneknows/admin", methods=["GET", "POST"])
 def admin():
+    navigation=dataget()
     try:
-        navigation=dataget()
+        print("1")
         if request.method == "POST":
+            print("1")
             option = request.form['options']
+            print(option)
             datadel(int(option))
         navigation=dataget()
         return render_template("admin.html", navigation = navigation)
@@ -29,8 +32,8 @@ def new_student():
     if request.method == "POST":    
         a = request.form["name1"]
         m = request.form["name2"]
-        dataput(a, m)
         k = Calmain(a, m)
+        dataput(a, m,k)
     return render_template("love.html", result=k)
 
 
