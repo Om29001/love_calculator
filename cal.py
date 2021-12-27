@@ -63,7 +63,5 @@ def step3(k3):
 
 def Calmain(a="ooollll", m="lllloooo"):
     l = step1(a, m)
-    print("step1", l)
     k3 = step2(l)
-    print("step2", k3)
     return step3(k3)

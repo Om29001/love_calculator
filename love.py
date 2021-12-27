@@ -1,24 +1,43 @@
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, request, flash
 from cal import Calmain
+from DB import dataget, dataput, datadel
+
 app = Flask(__name__)
 
-@app.route('/<user>')
+
+@app.route("/<user>")
 def hello_name(user):
-   return render_template('hello.html', name = user)
+    return render_template("hello.html", name=user)
 
 
-@app.route('/', methods =["GET", "POST"])
+@app.route("/nooneknows/admin", methods=["GET", "POST"])
+def admin():
+    try:
+        navigation=dataget()
+        if request.method == "POST":
+            option = request.form['options']
+            datadel(int(option))
+        navigation=dataget()
+        return render_template("admin.html", navigation = navigation)
+    finally:
+        return render_template("admin.html", navigation = navigation)
+
+
+@app.route("/", methods=["GET", "POST"])
 def new_student():
     k = 0
-    if request.method == 'POST':
-        a = request.form['name1']
-        m = request.form['name2']
-        k = Calmain(a,m)
-    return render_template('love.html', result = k)
+    if request.method == "POST":    
+        a = request.form["name1"]
+        m = request.form["name2"]
+        dataput(a, m)
+        k = Calmain(a, m)
+    return render_template("love.html", result=k)
 
-@app.route('/info')
+
+@app.route("/info")
 def info():
-    return render_template('info.html')
+    return render_template("info.html")
 
-if __name__ == '__main__':
-   app.run(debug = True)
+
+if __name__ == "__main__":
+    app.run(debug=True)

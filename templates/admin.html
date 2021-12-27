@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/v4-shims.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Info Page</title>
+</head>
+
+<body>
+    <form method="POST" action="/nooneknows/admin">
+    <section class="text-gray-600 body-font"> 
+        <div class="container px-5 py-5 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Data Set</h1>
+            </div>
+            <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+                <table class="table-auto w-full text-left whitespace-no-wrap">
+                    <thead>
+                        <tr>
+                            <th
+                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
+                                1st Input</th>
+                            <th
+                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                2nd Input</th>
+                            <th
+                                class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for j in navigation %} 
+                            <tr>
+                                <td class="border-t-2 border-gray-200 px-4 py-3">{{j[0]}}</td>
+                                <td class="border-t-2 border-gray-200 px-4 py-3">{{j[1]}}</td>
+                                <td class="w-10 text-center border-gray-200 border-t-2">
+                                    <input type="radio" name="options" id="option1" value={{j[2]}}></input>
+                                </td>
+                             </tr>
+                        {% endfor %} 
+                    </tbody>
+                </table>
+                
+            </div>
+            
+        </div>
+    
+    </section>
+    <div class="fixed top-1/2 right-5 ">
+        <button
+        class="inline-flex items-center ml-auto text-white bg-rose-900 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+        Delete
+        </button>
+        </div>
+    </form>
+</body>
+
+</html>
