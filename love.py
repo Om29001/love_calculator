@@ -23,6 +23,9 @@ def new_student():
 def ad():
     return render_template("ads.txt")
 
+@app.route("/info/ads.txt")
+def ad2():
+    return render_template("ads.txt")
 
 @app.route("/info")
 def info():
