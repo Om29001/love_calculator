@@ -10,8 +10,6 @@ def hello_name(user):
     return render_template("hello.html", name=user)
 
 
-
-
 @app.route("/", methods=["GET", "POST"])
 def new_student():
     k = 0
@@ -20,6 +18,10 @@ def new_student():
         m = request.form["name2"]
         k = Calmain(a, m)
     return render_template("love.html", result=k)
+
+@app.route("/ads.txt")
+def ad():
+    return render_template("ads.txt")
 
 
 @app.route("/info")
