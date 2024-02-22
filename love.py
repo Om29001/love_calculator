@@ -5,9 +5,9 @@ from cal import Calmain
 app = Flask(__name__)
 
 
-@app.route("/<user>")
-def hello_name(user):
-    return render_template("hello.html", name=user)
+# @app.route("/<user>")
+# def hello_name(user):
+#     return render_template("hello.html", name=user)
 
 
 @app.route("/", methods=["GET", "POST"])
